@@ -3,4 +3,14 @@
     <string name="btnPlay">Play</string>
     <string name="btnRegister">Register</string>
     <string name="btnListAll">List All</string>
+    <string name="lblQuestion">Question</string>
+    <string name="lblA1">Correct Answer</string>
+    <string name="lblA2">Answer 2</string>
+    <string name="lblA3">Answer 3</string>
+    <string name="btnDelete">Delete</string>
+    <string name="btnAdd">Add</string>
+    <string name="hintQuestion">Type the question here</string>
+    <string name="hintA1">Type the correct answer</string>
+    <string name="hintA2">Type an alternative answer</string>
+    <string name="hintA3">Type another alternative answer</string>
 </resources>
