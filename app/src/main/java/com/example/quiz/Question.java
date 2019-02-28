@@ -4,12 +4,14 @@ import java.util.Objects;
 
 public class Question {
 
+    private int _id;
     private String question;
     private String a1;
     private String a2;
     private String a3;
 
-    public Question(String question, String a1, String a2, String a3) {
+    public Question(int _id, String question, String a1, String a2, String a3) {
+        this._id = _id;
         this.question = question;
         this.a1 = a1;
         this.a2 = a2;
@@ -17,6 +19,14 @@ public class Question {
     }
 
     public Question() { }
+
+    public int get_id() {
+        return _id;
+    }
+
+    public void set_id(int _id) {
+        this._id = _id;
+    }
 
     public String getQuestion() {
         return question;
@@ -55,21 +65,23 @@ public class Question {
         if (this == o) return true;
         if (!(o instanceof Question)) return false;
         Question question1 = (Question) o;
-        return Objects.equals(getQuestion(), question1.getQuestion()) &&
-                Objects.equals(getA1(), question1.getA1()) &&
-                Objects.equals(getA2(), question1.getA2()) &&
-                Objects.equals(getA3(), question1.getA3());
+        return _id == question1._id &&
+                Objects.equals(question, question1.question) &&
+                Objects.equals(a1, question1.a1) &&
+                Objects.equals(a2, question1.a2) &&
+                Objects.equals(a3, question1.a3);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getQuestion(), getA1(), getA2(), getA3());
+        return Objects.hash(_id, question, a1, a2, a3);
     }
 
     @Override
     public String toString() {
         return "Question{" +
-                "question='" + question + '\'' +
+                "_id=" + _id +
+                ", question='" + question + '\'' +
                 ", a1='" + a1 + '\'' +
                 ", a2='" + a2 + '\'' +
                 ", a3='" + a3 + '\'' +
