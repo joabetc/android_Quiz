@@ -68,4 +68,20 @@ public class CRUDQuiz {
         db.close();
         return cursor;
     }
+
+    public Cursor getById(Question question) {
+        Cursor cursor;
+        String[] columns = {"_id", "question", "a1", "a2", "a3"};
+        String where = "_id = " + question.get_id();
+
+        db = createDB.getReadableDatabase();
+        cursor = db.query("Quiz", columns, where, null, null, null, null);
+
+        if (cursor != null) {
+            cursor.moveToFirst();
+        }
+
+        db.close();
+        return cursor;
+    }
 }
