@@ -20,7 +20,7 @@ public class CreateDB extends SQLiteOpenHelper {
                 "question TEXT, " +
                 "a1 TEXT, " +
                 "a2 TEXT, " +
-                "a3 TEXT";
+                "a3 TEXT)";
 
         db.execSQL(sql);
     }
