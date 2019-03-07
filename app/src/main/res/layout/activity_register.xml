@@ -24,8 +24,8 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
         android:ems="10"
+        android:hint="@string/hintQuestion"
         android:inputType="text"
-        android:text="@string/hintQuestion"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtQuestion" />
@@ -48,8 +48,8 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
         android:ems="10"
+        android:hint="@string/hintA1"
         android:inputType="text"
-        android:text="@string/hintA1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtCorrectAnswer" />
@@ -72,8 +72,8 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
         android:ems="10"
+        android:hint="@string/hintA2"
         android:inputType="text"
-        android:text="@string/hintA2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtA2" />
@@ -96,8 +96,8 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
         android:ems="10"
+        android:hint="@string/hintA3"
         android:inputType="text"
-        android:text="@string/hintA3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtA3" />
