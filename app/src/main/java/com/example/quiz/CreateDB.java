@@ -7,7 +7,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class CreateDB extends SQLiteOpenHelper {
 
     public static final String DBNAME = "quiz.sqlite";
-    public static final int VERSION = 1;
+    public static final int VERSION = 2;
 
     public CreateDB(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
         super(context, name, factory, version);
@@ -16,7 +16,7 @@ public class CreateDB extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         String sql = "CREATE TABLE IF NOT EXISTS Quiz(" +
-                "_id INT NOT NULL PRIMARY KEY AUTOINCREMENT," +
+                "_id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT," +
                 "question TEXT, " +
                 "a1 TEXT, " +
                 "a2 TEXT, " +
