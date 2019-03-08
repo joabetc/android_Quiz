@@ -13,4 +13,5 @@
     <string name="hintA1">Type the correct answer</string>
     <string name="hintA2">Type an alternative answer</string>
     <string name="hintA3">Type another alternative answer</string>
+    <string name="lblPoints">Points</string>
 </resources>

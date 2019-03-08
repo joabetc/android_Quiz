@@ -9,11 +9,9 @@ import android.support.v7.widget.RecyclerView;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ListAllActivity extends AppCompatActivity {
+public class ListAllActivity extends BaseActivity {
 
-    private List<Question> quiz;
     private RecyclerView listAllItems;
-    private CRUDQuiz crudQuiz;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,24 +26,6 @@ public class ListAllActivity extends AppCompatActivity {
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this,
                 LinearLayoutManager.VERTICAL, false);
         listAllItems.setLayoutManager(layoutManager);
-    }
-
-    public List<Question> loadList(Cursor cursor) {
-        List<Question> quiz = new ArrayList<>();
-
-        if (cursor.moveToFirst()) {
-            do {
-                Question question = new Question(
-                        cursor.getInt(cursor.getColumnIndex("_id")),
-                        cursor.getString(cursor.getColumnIndex("question")),
-                        cursor.getString(cursor.getColumnIndex("a1")),
-                        cursor.getString(cursor.getColumnIndex("a2")),
-                        cursor.getString(cursor.getColumnIndex("a3")));
-                quiz.add(question);
-            } while (cursor.moveToNext());
-        }
-
-        return quiz;
     }
 
 }
